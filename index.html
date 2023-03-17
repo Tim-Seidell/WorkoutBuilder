@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Builder</title>
+</head>
+<body>
+    <!-- Workout Configuration -->
+    <input type="checkbox" id="bicep">
+    <label for="bicep">Bicep</label><br>
+
+    <input type="checkbox" id="back">
+    <label for="back">Back</label><br>
+
+    <input type="checkbox" id="chest">
+    <label for="chest">Chest</label><br>
+
+    <input type="checkbox" id="tricep">
+    <label for="tricep">Tricep</label><br>
+
+    <input type="checkbox" id="leg">
+    <label for="legs">Legs</label><br>
+
+    <input type="checkbox" id="core">
+    <label for="core">Core</label><br>
+
+    <input type="button" onclick="increment('exercises_per_muscle_group', '-')" value="-">
+    <input id="exercises_per_muscle_group" type="text" value="3">
+    <input type="button" onclick="increment('exercises_per_muscle_group', '+')" value="+">
+    <br>
+
+    <!-- Generate Button -->
+    <input type="button" onclick="loadConfiguredWorkout();/*generateExerciseList(back);*/" value="Generate">
+
+    <!-- List where workout is built -->
+    <ul id="list"></ul>
+
+
+</body>
+<script src="js/workouts.js"></script>
+<script src="js/randomizer.js"></script>
+<script src="js/functions.js"></script>
+</html>
